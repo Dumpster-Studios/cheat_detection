@@ -824,7 +824,7 @@ local function handle_cheat_detection()
           elseif automod_type == "ban" then
           
             minetest.log("action", "[CHEAT DETECTION]: Server has banned "..pname.." for performing continuous abnormal behaviors while in-game.")
-            minetest.ban_player(pname)
+            minetest.ban_player(pname, "Cheat Detection: "..automod_reason)
               
           end
 
