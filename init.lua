@@ -75,7 +75,7 @@ local function verify_node(node)
   return def
 end
 
-
+--Add tracker to player
 local function add_tracker(player)
   local name = player:get_player_name()
   if not detection_list[name] then
