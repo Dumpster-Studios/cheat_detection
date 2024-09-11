@@ -168,8 +168,6 @@ local function cast_ray_under_pos(pos, range, objects, liquids)
   local ray_end = vector.add(ray_start, ray_modif)
   local ray = minetest.raycast(ray_start, ray_end, objects, liquids)
   local object = ray:next()
-  --https://github.com/GenshinMT/dds_parse
-
   return object
 end
 
@@ -245,7 +243,7 @@ local function check_player_is_inside_nodes(player)
   local node_bottom = minetest.get_node(pos)
   local result = false
 
-  if node_top and node_bottom thenhttps://github.com/GenshinMT/dds_parse
+  if node_top and node_bottom then
     node_top = minetest.registered_nodes[node_top.name]
     node_bottom = minetest.registered_nodes[node_bottom.name]
     if node_top and node_top.walkable and node_bottom and node_bottom.walkable then
@@ -912,7 +910,7 @@ minetest.register_on_punchplayer(function(player, hitter, punchtime)
   local name = nil
   local info2 = nil
   local pinfo = nil
-  local delay = nilhttps://github.com/GenshinMT/dds_parse
+  local delay = nil
 
   --Knockback Exceptions
   if info then
